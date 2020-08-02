@@ -19,7 +19,7 @@ class InstBot:
         self.driver = webdriver.Chrome()
 
         self.login()
-        #self.follow()
+        self.follow()
         
     def login(self):
 
@@ -55,7 +55,7 @@ class InstBot:
 
     def follow(self):
 
-        self.driver.get('https://www.instagram.com/'+'lagishettyvasavi')
+        self.driver.get('https://www.instagram.com/'+'man_with_3_eyes')
 
         try:
             follow_buttons = self.find_button('Follow')
@@ -72,10 +72,10 @@ class InstBot:
         like_save_post = self.driver.find_elements_by_class_name("_8-yf5") 
 
         
-        #print(like_save_post)
+        print(like_save_post)
 
-        #for i in like_save_post:
-        #    print(i.get_attribute('aria-label'))
+        for i in like_save_post:
+            print(i.get_attribute('aria-label'))
 
         time.sleep(2)
 
@@ -91,7 +91,7 @@ class InstBot:
 
             comment = self.driver.find_element_by_class_name("Ypffh")
 
-            #print(comment)
+            print(comment)
 
             ActionChains(self.driver)\
                 .move_to_element(comment).click()\
@@ -114,7 +114,7 @@ class InstBot:
                
 if __name__ == '__main__':
 
-    bot = InstBot('Shakimaamskrate','FlairToDevsKrate1.0')
+    bot = InstBot('dragonperu@protonmail.com','Dsragonperu@123')
 
     posts = [('https://www.instagram.com/p/BVhd7bLlhhC/',None)]
     
