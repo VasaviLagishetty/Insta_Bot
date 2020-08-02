@@ -41,11 +41,13 @@ class InstBot:
             .send_keys(self.password)\
             .perform()
 
+        time.sleep(5)
+
         button = self.driver.find_element_by_class_name("L3NKy") 
         
         button.click()
 
-        time.sleep(2)
+        time.sleep(15)
 
     def find_button(self, button_text):
 
@@ -57,9 +59,14 @@ class InstBot:
 
         self.driver.get('https://www.instagram.com/'+'man_with_3_eyes')
 
+        sleep(5)
+
         try:
+
             follow_buttons = self.find_button('Follow')
             follow_buttons.click()
+            sleep(3)
+
         except:
             pass
 
@@ -69,23 +76,25 @@ class InstBot:
 
         self.driver.get(post_url)
 
+        sleep(5)
+
         like_save_post = self.driver.find_elements_by_class_name("_8-yf5") 
 
         
-        print(like_save_post)
+        #print(like_save_post)
 
-        for i in like_save_post:
-            print(i.get_attribute('aria-label'))
+        #for i in like_save_post:
+        #    print(i.get_attribute('aria-label'))
 
         time.sleep(2)
 
         like_save_post[1].click() #like_post
 
-        time.sleep(2)
+        time.sleep(5)
 
         like_save_post[5].click() #save_post
 
-        time.sleep(2)
+        time.sleep(5)
 
         if post_comment != None:
 
@@ -98,7 +107,7 @@ class InstBot:
                 .send_keys(post_comment)\
                 .perform()
 
-            time.sleep(2)
+            time.sleep(5)
 
             post_comment_button = self.find_button('Post')
 
