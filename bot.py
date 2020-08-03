@@ -10,6 +10,10 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 
 
+# Download Chrome Webdriver using "https://chromedriver.chromium.org/" according to the version
+
+# And check your current chrome version from "chrome://version/"
+
 class InstBot:
 
     def __init__(self,username,password):
