@@ -57,7 +57,7 @@ class InstBot:
 
     def follow(self):
 
-        self.driver.get('https://www.instagram.com/'+'man_with_3_eyes')
+        self.driver.get('https://www.instagram.com/'+USERNAME_TO_FOLLOW)
 
         sleep(5)
 
@@ -123,9 +123,9 @@ class InstBot:
                
 if __name__ == '__main__':
 
-    bot = InstBot('dragonperu@protonmail.com','Dsragonperu@123')
+    bot = InstBot(USERNAME,PASSWORD)
 
-    posts = [('https://www.instagram.com/p/BVhd7bLlhhC/',None)]
+    posts = [(POST_LINK,None)]
     
     
     for url_comment in posts:
